@@ -98,8 +98,11 @@ int main()
     Read_Matrix(v1, row, col, "Mat_1.txt");
     Read_Matrix(v2, row, col, "Mat_2.txt");
 
+    chrono::steady_clock::time_point begin = chrono::steady_clock::now();
     Multiplication(v1, v2, v3);
     Write_Res("Multiplication.txt", v3);
+    chrono::steady_clock::time_point end = chrono::steady_clock::now();
+    cout << "Diff(ms) = " << chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << endl;
 
     //cout << v1[0][0] << " " << v1[0][1] << endl;
     //cout << v2[0][0] << " " << v2[0][1] << endl;
