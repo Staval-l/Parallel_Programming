@@ -1,0 +1,26 @@
+========================
+Size of matrix:
+100 * 100
+Time of multiplication:
+48 ms
+========================
+Size of matrix:
+200 * 200
+Time of multiplication:
+294 ms
+========================
+Size of matrix:
+300 * 300
+Time of multiplication:
+744 ms
+========================
+Size of matrix:
+400 * 400
+Time of multiplication:
+1825 ms
+========================
+Size of matrix:
+500 * 500
+Time of multiplication:
+3453 ms
+========================

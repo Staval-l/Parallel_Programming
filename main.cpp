@@ -104,8 +104,5 @@ int main()
     chrono::steady_clock::time_point end = chrono::steady_clock::now();
     cout << "Diff(ms) = " << chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << endl;
 
-    //cout << v1[0][0] << " " << v1[0][1] << endl;
-    //cout << v2[0][0] << " " << v2[0][1] << endl;
-
     return 0;
 }
