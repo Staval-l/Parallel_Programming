@@ -100,8 +100,8 @@ int main()
 
     chrono::steady_clock::time_point begin = chrono::steady_clock::now();
     Multiplication(v1, v2, v3);
-    Write_Res("Multiplication.txt", v3);
     chrono::steady_clock::time_point end = chrono::steady_clock::now();
+    Write_Res("Multiplication.txt", v3);
     cout << "Diff(ms) = " << chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << endl;
 
     return 0;
