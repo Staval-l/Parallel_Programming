@@ -24,7 +24,7 @@ int main(int argc,char *argv[])
     int size = 1000;
     int rank, numprocs, line;
 
-    MPI_Init(NULL,NULL); //MPI Initialize
+    MPI_Init(&argc,&argv); //MPI Initialize
     MPI_Comm_rank(MPI_COMM_WORLD,&rank); // Получить текущий номер процесса
     MPI_Comm_size(MPI_COMM_WORLD,&numprocs); // Получить количество процессов
 
