@@ -25,16 +25,16 @@ int main(int argc,char *argv[])
     int rank, numprocs, line;
 
     MPI_Init(&argc,&argv); //MPI Initialize
-    MPI_Comm_rank(MPI_COMM_WORLD,&rank);// Получить текущий номер процесса
-    MPI_Comm_size(MPI_COMM_WORLD,&numprocs);// Получить количество процессов
+    MPI_Comm_rank(MPI_COMM_WORLD,&rank); // Получить текущий номер процесса
+    MPI_Comm_size(MPI_COMM_WORLD,&numprocs); // Получить количество процессов
 
-    line = size/numprocs;// Делим данные на блоки (количество процессов), и основной процесс также должен обрабатывать данные
+    line = size/numprocs; // Делим данные на блоки (количество процессов), и основной процесс также должен обрабатывать данные
     A = (int*)malloc(sizeof(int)*size*size);
     B = (int*)malloc(sizeof(int)*size*size);
     C = (int*)malloc(sizeof(int)*size*size);
     // Размер кеша больше или равен размеру обрабатываемых данных, когда он больше, чем фактическая часть данных
-    buffer = (int*)malloc(sizeof(int)*size*line);// Размер пакета данных
-    ans = (int*)malloc(sizeof(int)*size*line);// Сохраняем результат расчета блока данных
+    buffer = (int*)malloc(sizeof(int)*size*line); // Размер пакета данных
+    ans = (int*)malloc(sizeof(int)*size*line); // Сохраняем результат расчета блока данных
 
     // Основной процесс присваивает матрице начальное значение и передает матрицу N каждому процессу, а матрицу M передает каждому процессу в группах.
     if (rank == 0)
@@ -111,7 +111,7 @@ int main(int argc,char *argv[])
         MPI_Send(ans,line*size,MPI_INT,0,3,MPI_COMM_WORLD);
     }
 
-    MPI_Finalize();//Конец
+    MPI_Finalize(); // Конец
 
     return 0;
 }
