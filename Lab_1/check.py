@@ -3,11 +3,11 @@ import numpy as np
 mat_1 = []
 mat_2 = []
 mat_3 = []
-size = 500
+size = 400
 
-data_1 = np.genfromtxt('C:\\Users\\stalk\\Documents\\Projects\\cmake-build-debug\\Mat_1.txt', dtype=int)
-data_2 = np.genfromtxt('C:\\Users\\stalk\\Documents\\Projects\\cmake-build-debug\\Mat_2.txt', dtype=int)
-multiplication = np.genfromtxt('C:\\Users\\stalk\\Documents\\Projects\\cmake-build-debug\\Multiplication.txt',
+data_1 = np.genfromtxt('C:\\Users\\stalk\\Documents\\Projects\\cmake-build-debug\\a.txt', dtype=int)
+data_2 = np.genfromtxt('C:\\Users\\stalk\\Documents\\Projects\\cmake-build-debug\\b.txt', dtype=int)
+multiplication = np.genfromtxt('C:\\Users\\stalk\\Documents\\Projects\\cmake-build-debug\\c.txt',
                                dtype=int)
 r_1 = []
 r_2 = []
