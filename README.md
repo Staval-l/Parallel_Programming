@@ -1,9 +1,13 @@
 # Parallel_Programming Labs
-First and second lab of discipline Parallel Programming.
+First, second and third labs of discipline Parallel Programming.
+____________________________________________________________________________________________________________________________________________
+In 'Lab_1' folder store code for first lab without any technology
 ____________________________________________________________________________________________________________________________________________
 In 'Lab_2' folder store code for second lab with OpenMP technology
 ____________________________________________________________________________________________________________________________________________
-In 'files' folder store files with data about matrices:
+In 'Lab_3' folder store code for third lab with MPI technology
+____________________________________________________________________________________________________________________________________________
+In 'Lab_1 -> files' folder store files with data about matrices:
 ____________________________________________________________________________________________________________________________________________
 The 'Graph.xlsx' and 'Graph.png' store information about the time required to multiply square matrices by the size of those square matrices.
 ____________________________________________________________________________________________________________________________________________
