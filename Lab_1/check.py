@@ -3,7 +3,7 @@ import numpy as np
 mat_1 = []
 mat_2 = []
 mat_3 = []
-size = 400
+size = 500
 
 data_1 = np.genfromtxt('C:\\Users\\stalk\\Documents\\Projects\\cmake-build-debug\\a.txt', dtype=int)
 data_2 = np.genfromtxt('C:\\Users\\stalk\\Documents\\Projects\\cmake-build-debug\\b.txt', dtype=int)
