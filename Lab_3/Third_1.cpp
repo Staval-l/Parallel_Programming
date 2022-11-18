@@ -21,25 +21,24 @@ int main(int argc,char *argv[])
     double start, stop;
     int i, j, k, l;
     int *A, *B, *C, *buffer, *ans;
-    int size = 500;
+    int size = 1000;
     int rank, numprocs, line;
 
-    MPI_Init(&argc,&argv); //MPI Initialize
+    MPI_Init(NULL,NULL); //MPI Initialize
     MPI_Comm_rank(MPI_COMM_WORLD,&rank); // Получить текущий номер процесса
     MPI_Comm_size(MPI_COMM_WORLD,&numprocs); // Получить количество процессов
 
     line = size/numprocs; // Делим данные на блоки (количество процессов), и основной процесс также должен обрабатывать данные
-    A = (int*)malloc(sizeof(int)*size*size);
-    B = (int*)malloc(sizeof(int)*size*size);
-    C = (int*)malloc(sizeof(int)*size*size);
+    A = new int[size*size];
+    B = new int[size*size];
+    C = new int[size*size];
     // Размер кеша больше или равен размеру обрабатываемых данных, когда он больше, чем фактическая часть данных
-    buffer = (int*)malloc(sizeof(int)*size*line); // Размер пакета данных
-    ans = (int*)malloc(sizeof(int)*size*line); // Сохраняем результат расчета блока данных
+    buffer = new int[size*line]; // Размер пакета данных
+    ans = new int[size*line]; // Сохраняем результат расчета блока данных
 
     // Основной процесс присваивает матрице начальное значение и передает матрицу N каждому процессу, а матрицу M передает каждому процессу в группах.
     if (rank == 0)
     {
-
         start = MPI_Wtime();
         for(i = 0; i < size; i++) // Чтение данных
             for(j = 0; j < size; j++)
@@ -81,15 +80,15 @@ int main(int argc,char *argv[])
         // Статистика по времени
         stop = MPI_Wtime();
 
-        printf("Rank: %d\nTime: %lf s\n", rank, stop-start);
+        std::cout << "Rank: " << rank << "\nTime: " << stop-start << " s" << std::endl;
 
         //Print_Matrix(C, size);
 
-        free(A);
-        free(B);
-        free(C);
-        free(buffer);
-        free(ans);
+        delete [] A;
+        delete [] B;
+        delete [] C;
+        delete [] buffer;
+        delete [] ans;
     }
 
         // Другие процессы получают данные и после вычисления результата отправляют их в основной процесс
