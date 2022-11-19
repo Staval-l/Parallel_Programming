@@ -39,7 +39,6 @@ int main(int argc,char *argv[])
     // Основной процесс присваивает матрице начальное значение и передает матрицу N каждому процессу, а матрицу M передает каждому процессу в группах.
     if (rank == 0)
     {
-        start = MPI_Wtime();
         for(i = 0; i < size; i++) // Чтение данных
             for(j = 0; j < size; j++)
                 A[i * size + j] = (i + 2) * (j + 1);
@@ -48,6 +47,7 @@ int main(int argc,char *argv[])
             for(j = 0; j < size; j++)
                 B[i * size + j] = (i + 1) + 2 * (j + 3);
 
+        start = MPI_Wtime();
         // Отправить матрицу N другим подчиненным процессам
         for (i = 1; i < numprocs; i++) {
             MPI_Send(B,size*size,MPI_INT,i,0,MPI_COMM_WORLD);
