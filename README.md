@@ -1,13 +1,17 @@
 # Parallel_Programming Labs
 First, second and third labs of discipline Parallel Programming.
 ____________________________________________________________________________________________________________________________________________
-In 'Lab_1' folder store code for first lab without any technology
+In 'Lab_1' folder store code for first lab without any technology.
 ____________________________________________________________________________________________________________________________________________
-In 'Lab_2' folder store code for second lab with OpenMP technology
+In 'Lab_2' folder store code for second lab with OpenMP technology.
 ____________________________________________________________________________________________________________________________________________
-In 'Lab_3' folder store code for third lab with MPI technology
+In 'Lab_3' folder store code for third lab with MPI technology.
 ____________________________________________________________________________________________________________________________________________
-In 'Lab_1 -> files' folder store files with data about matrices:
+In 'Lab_4' folder store code for fourth lab with CUDA technology.
+____________________________________________________________________________________________________________________________________________
+In 'Lab_1 -> files' folder store files with data about matrices.
+____________________________________________________________________________________________________________________________________________
+In 'Lab_4 -> files' folder store files with data about the time required to multiply square matrices by the size of those square matrices.
 ____________________________________________________________________________________________________________________________________________
 The 'Graph.xlsx' and 'Graph.png' store information about the time required to multiply square matrices by the size of those square matrices.
 ____________________________________________________________________________________________________________________________________________
