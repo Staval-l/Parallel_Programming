@@ -1,5 +1,5 @@
 # Parallel_Programming Labs
-First, second and third labs of discipline Parallel Programming.
+First, second, third and fourth labs of discipline Parallel Programming.
 ____________________________________________________________________________________________________________________________________________
 In 'Lab_1' folder store code for first lab without any technology.
 ____________________________________________________________________________________________________________________________________________
